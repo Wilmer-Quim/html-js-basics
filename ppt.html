@@ -1,0 +1,47 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Piedra, papel o tijera</title>
+        <script>
+        function aleatorio(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min)
+        }
+        //1 es piedra |2 es papel |3 tijera
+        let jugador=0
+        let pc=aleatorio(1, 3)           
+        jugador=prompt("elige: 1 es piedra | 2 es papel | 3 tijera ")
+        if(jugador == 1){
+            alert("elegiste 🥌")
+        } else if(jugador == 2){
+            alert("elegiste 🧻")
+        } else if(jugador == 3){
+            alert("elegiste ✂")
+        } else {
+            alert("elegiste una jugada que no existe")
+        }
+        if(pc == 1){
+            alert("pc elige 🥌")
+        } else if(pc == 2){
+            alert("pc elige 🧻")
+        } else if(pc == 3){
+            alert("pc elige ✂")
+        }
+            //COMBATE
+        if (pc==jugador){
+            alert("EMPATE")
+        } else if(jugador==1 && pc==3){
+            alert("GANASTE")
+        }else if(jugador==2 && pc==1){
+            alert("GANASTE")
+        }else if(jugador==3 && pc==2){
+            alert("GANASTE")
+        }else {
+            alert("PERDISTE")
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Acabas de jugar "piedra papel o tijera contra tu propia PC"</h1>
+    </body>
+</html>
